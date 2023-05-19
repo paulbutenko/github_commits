@@ -6,4 +6,4 @@ en:
   commit:
     message: ! "[%{commit_id}](%{commit_url}) by __%{author}__:\n~~~\n%{message}\n~~~"
   pull_request:
-    message: ! "[Pull request %{pr_number} %{pr_state}](%{pr_url}) by __%{author}__:\n~~~\n%{message}\n~~~"
+    message: ! "[Pull request %{pr_number}](%{pr_url}) by __%{author}__ is %{pr_state}:\n~~~\n%{message}\n~~~"
