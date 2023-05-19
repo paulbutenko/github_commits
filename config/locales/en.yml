@@ -1,8 +1,8 @@
 # English strings go here for Rails i18n
 en:
-  lables:
-    no_commit_data_found: "Request does not have commit data."
-    no_issue_found: "Issue not found."
+  labels:
+    no_data_found: "Request does not have commit or pull request data."
+    no_issue_found: "Issues not found."
   commit:
     message: ! "[%{commit_id}](%{commit_url}) by __%{author}__:\n~~~\n%{message}\n~~~"
   pull_request:

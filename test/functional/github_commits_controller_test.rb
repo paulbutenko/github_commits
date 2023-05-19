@@ -20,7 +20,7 @@ class GithubCommitsControllerTest < ActionController::TestCase
       post :create_comment,invalid_body
     end
     assert_response :success
-    assert_equal JSON.parse(@response.body)['error'], I18n.translate('lables.no_commit_data_found')
+    assert_equal JSON.parse(@response.body)['error'], I18n.translate('labels.no_data_found')
   end
 
   def test_create_comment_without_issue_number
@@ -30,7 +30,7 @@ class GithubCommitsControllerTest < ActionController::TestCase
     assert_no_difference('Journal.count') do 
       post :create_comment,new_valid_body
     end
-    assert_equal JSON.parse(@response.body)['error'], I18n.translate('lables.no_issue_found')
+    assert_equal JSON.parse(@response.body)['error'], I18n.translate('labels.no_issue_found')
     assert_response :success
   end
 
@@ -42,7 +42,7 @@ class GithubCommitsControllerTest < ActionController::TestCase
       post :create_comment,new_valid_body
     end
     assert_response :success
-    assert_equal JSON.parse(@response.body)['error'], I18n.translate('lables.no_issue_found')
+    assert_equal JSON.parse(@response.body)['error'], I18n.translate('labels.no_issue_found')
   end
 
   def test_create_comment_with_empty_issue_number
@@ -53,7 +53,7 @@ class GithubCommitsControllerTest < ActionController::TestCase
       post :create_comment,new_valid_body
     end
     assert_response :success
-    assert_equal JSON.parse(@response.body)['error'], I18n.translate('lables.no_issue_found')
+    assert_equal JSON.parse(@response.body)['error'], I18n.translate('labels.no_issue_found')
   end
 
   def test_create_comment_with_text_as_issue_number
@@ -64,7 +64,7 @@ class GithubCommitsControllerTest < ActionController::TestCase
       post :create_comment,new_valid_body
     end
     assert_response :success
-    assert_equal JSON.parse(@response.body)['error'], I18n.translate('lables.no_issue_found')
+    assert_equal JSON.parse(@response.body)['error'], I18n.translate('labels.no_issue_found')
   end
 
   def test_create_comment_with_existing_user_email
@@ -102,7 +102,7 @@ class GithubCommitsControllerTest < ActionController::TestCase
     end
 
     assert_response :success
-    assert_equal JSON.parse(@response.body)['error'], I18n.translate('lables.no_issue_found')
+    assert_equal JSON.parse(@response.body)['error'], I18n.translate('labels.no_issue_found')
   end
 
   private
