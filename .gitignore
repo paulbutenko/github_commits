@@ -1,0 +1,18 @@
+*.rbc
+.rspec
+*.orig
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+
+# dotenv, dotenv-rails
+# TODO Comment out these rules if environment variables can be committed
+.env
+.env*.local
+
+# Ignore IDE files
+/.project
